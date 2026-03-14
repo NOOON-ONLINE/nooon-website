@@ -55,7 +55,7 @@ export default function HomePage() {
         </div>
 
         {/* ── CENTER NAV PILL ── */}
-        <div style={{ position: 'absolute', left: 603, top: 33, width: 522, height: 27, borderRadius: 33.5, background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)' }} />
+        <div style={{ position: 'absolute', left: 603, top: 26, width: 522, height: 42, borderRadius: 33.5, background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)' }} />
         <p style={{ position: 'absolute', left: 'calc(50% - 234px)', top: 'calc(50% - 504px)', font: 'bold 16px Helvetica, sans-serif', color: '#fff', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>NEW IN</p>
         <p style={{ position: 'absolute', left: 'calc(50% - 76.5px)', top: 'calc(50% - 504px)', font: 'bold 16px Helvetica, sans-serif', color: '#fff', textTransform: 'uppercase', whiteSpace: 'nowrap', transform: 'translateX(-50%)' }}>COLLECTIONS</p>
         <p style={{ position: 'absolute', left: 'calc(50% + 71.5px)', top: 'calc(50% - 504px)', font: 'bold 16px Helvetica, sans-serif', color: '#fff', textTransform: 'uppercase', whiteSpace: 'nowrap', transform: 'translateX(-50%)' }}>CAMPAIGNS</p>
