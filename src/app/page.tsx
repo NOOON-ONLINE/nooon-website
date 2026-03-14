@@ -26,7 +26,7 @@ export default function HomePage() {
 
       {/* ── BACKGROUND IMAGE — outside the scale container, never stretched ── */}
       <Image
-        src="/images/restock-hero.jpg"
+        src="/images/hope-page.jpg"
         alt=""
         fill
         priority
