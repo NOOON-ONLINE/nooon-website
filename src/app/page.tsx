@@ -26,7 +26,7 @@ export default function HomePage() {
 
       {/* ── BACKGROUND IMAGE — outside the scale container, never stretched ── */}
       <Image
-        src="/images/hope-page.jpg"
+        src="/images/restock-hero.jpg"
         alt=""
         fill
         priority
@@ -78,9 +78,9 @@ export default function HomePage() {
           <span style={{ fontFamily: "'Bebas Neue', sans-serif" }}>)</span>
         </p>
 
-        {/* ── CENTER: LOGO ABOVE HEADLINE (same as top-left wordmark) ── */}
-        <div style={{ position: 'absolute', left: '50%', top: 428, width: 762, height: 100, transform: 'translateX(-50%)' }}>
-          <img src="/figma/group-18.svg" alt="Nooon" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        {/* ── CENTER: LOGO ABOVE HEADLINE ── */}
+        <div style={{ position: 'absolute', left: '50%', top: 428, width: 762, height: 99, transform: 'translateX(-50%)' }}>
+          <img src="/figma/group-27.svg" alt="Nooon" style={{ width: '100%', height: '100%' }} />
         </div>
 
         {/* ── IMMRSV SHWRM — center headline ── */}
