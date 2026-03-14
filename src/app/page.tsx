@@ -22,33 +22,35 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div style={{ width: '100vw', height: '100vh', overflow: 'hidden' }}>
+    <div style={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
+
+      {/* ── BACKGROUND IMAGE — outside the scale container, never stretched ── */}
+      <Image
+        src="/images/hope-page.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        style={{ objectFit: 'cover', objectPosition: 'center', pointerEvents: 'none', zIndex: 0 }}
+      />
+
+      {/* ── SCALED UI FRAME (1728×1080) ── */}
       <div
         style={{
-          position: 'relative',
+          position: 'absolute',
+          top: 0,
+          left: 0,
           width: FRAME_W,
           height: FRAME_H,
           transformOrigin: 'top left',
           transform: `scaleX(${scale.x}) scaleY(${scale.y})`,
-          overflow: 'hidden',
+          zIndex: 1,
         }}
       >
 
-        {/* ── BACKGROUND IMAGE — full screen, no rotation ── */}
-        <Image
-          src="/images/hope-page.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          style={{ objectFit: 'cover', objectPosition: 'center', pointerEvents: 'none' }}
-        />
-
         {/* ── WORDMARK PILL (top left) ── */}
         <div style={{ position: 'absolute', left: 39, top: 25, width: 262, height: 56, borderRadius: 18, background: 'rgba(151,151,151,0.2)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)' }} />
-
-        {/* Logo/wordmark SVG inside the pill */}
-        <div style={{ position: 'absolute', top: 40, left: 55, width: 229, height: 30 }}>
+        <div style={{ position: 'absolute', top: 39, left: 55, width: 229, height: 30 }}>
           <img src="/figma/group-18.svg" alt="Nooon" style={{ width: '100%', height: '100%' }} />
         </div>
 
@@ -76,14 +78,14 @@ export default function HomePage() {
           <span style={{ fontFamily: "'Bebas Neue', sans-serif" }}>)</span>
         </p>
 
-        {/* ── IMMRSV SHWRM — center headline SVG ── */}
-        <div style={{ position: 'absolute', left: '50%', top: 555.47, width: 1027.599, height: 98.378, transform: 'translateX(-50%)' }}>
-          <img src="/figma/immrsv-shwrm.svg" alt="IMMRSV SHWRM" style={{ width: '100%', height: '100%' }} />
+        {/* ── CENTER: LOGO ABOVE HEADLINE (same as top-left wordmark) ── */}
+        <div style={{ position: 'absolute', left: '50%', top: 428, width: 762, height: 100, transform: 'translateX(-50%)' }}>
+          <img src="/figma/group-18.svg" alt="Nooon" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
         </div>
 
-        {/* ── BRAILLE/DOT PATTERN — center ── */}
-        <div style={{ position: 'absolute', top: 428.4, left: 483.2, width: 761.6, height: 119.9 }}>
-          <img src="/figma/group-27.svg" alt="" style={{ width: '100%', height: '100%' }} />
+        {/* ── IMMRSV SHWRM — center headline ── */}
+        <div style={{ position: 'absolute', left: '50%', top: 555.47, width: 1027.599, height: 98.378, transform: 'translateX(-50%)' }}>
+          <img src="/figma/immrsv-shwrm.svg" alt="IMMRSV SHWRM" style={{ width: '100%', height: '100%' }} />
         </div>
 
         {/* ── BOTTOM: COPYRIGHT PILL ── */}
